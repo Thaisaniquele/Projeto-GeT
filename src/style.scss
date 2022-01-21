@@ -1,69 +1,52 @@
-$layout-breakpoint-small: 600px;
+$layout-breakpoint-small: 300px;
 header{
-  position: static;
-  width: 1440px;
-  height: 150px;
-  left: 0px;
-  top: 0px;
   background: #FFEDFF;
-  /* Inside Auto Layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
+}
+.logo {
+  
+  background: #FFEDFF;
 }
 body {
   font-family: 'Raleway', sans-serif;
-  position: static;
-  width: 1440px;
-  height: 850px;
-  left: 0px;
-  top: 150px;
+  
   background: rgba(255, 237, 255, 0.7);
-  /* Inside Auto Layout */
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 1;
-  margin: 0px 0px;
 }
-section {
-  display: flex;
-  flex-flow: row wrap;
+footer {
+
 }
 
 figure {
   margin: 0;
-  max-width: 50%;
+  max-width: 20%;
+  object-fit: cover;
 }
 figure img {
-  width: 10%;
+  width: calc(100% - 30px);
+  margin: 10px;
+  display: block;
+ 
 }
 
-@media screen and (max-width: $layout-breakpoint-small) {
-  section {
-    flex-direction: column;
-  }
-  figure {
-    max-width: 100%;
-  }
-}
 
 .unhas {
-  width: 100px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
-
-  text-align: center;
-
+  display: flex;
+  flex-flow: row wrap;
   p {
     color: #dc0787;
   }
-
   em {
     color: #67178c;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 300px) {
+  .unhas {
+    flex-direction: column;
+    flex-flow: column;
+  }
+  figure {
+    max-width: 100%;
+
   }
 }
